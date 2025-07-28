@@ -1,3 +1,6 @@
+"""
+
+
 
 '''
 This code is a simple grocery list example.
@@ -111,3 +114,20 @@ print("\n")
 print("for loop no range")
 for item in list1:
     print(item, end=" ")    
+
+"""
+print("\n")
+print("\n")
+
+total = 0
+amounts = [10, 20, 30, 40, 50]
+for i in range(0,len(amounts),1):
+    if amounts[i] > 30:
+        print(f"Amount {amounts[i]} is greater than 30 at index {i}") 
+    if amounts[i] < 30:
+        print(f"Amount {amounts[i]} is less than 30 at index {i}")
+    if amounts[i] == 30:
+        print(f"Amount {amounts[i]} is equal to 30 at index {i}")
+    
+    total += amounts[i]
+print(f"Total of amounts greater than 30: {total}")   
