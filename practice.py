@@ -128,6 +128,39 @@ for i in range(0,len(amounts),1):
         print(f"Amount {amounts[i]} is less than 30 at index {i}")
     if amounts[i] == 30:
         print(f"Amount {amounts[i]} is equal to 30 at index {i}")
+
+  
     
     total += amounts[i]
-print(f"Total of amounts greater than 30: {total}")   
+print(f"Total of amounts greater than 30: {total}")     
+print(amounts[:], end=" \n")
+print(amounts[:4], end=" \n")
+print(amounts[1:4], end=" \n")
+print("\n")
+print(amounts[:-2], end=" \n")  # Print all elements except the last one
+print(amounts[-2:], end=" \n")  # Print the last two elements
+print(amounts[-3:-5:-1], end=" \n")  # Print the last two elements
+print("\n")
+
+k=3
+n = len(amounts)
+print(f"n value is {n} and k value is {k} and the (n-k) index is {n-k} and the (n-k) element is {amounts[n-k]}")
+print(amounts[n-k:] + amounts[:n-k], end=" \n") 
+
+
+for i in range(len(amounts[:])):
+    print(f"Index {i} has value {amounts[i]}")
+
+
+nums = [1,2,3,4,5,6,7,8,9]
+n =  len(nums)
+k = k % n #  handle cases where k   > n
+
+def reverse(arr, start, end):
+    while start < end:
+        arr[start]= arr[end]
+        start += 1
+        end -= 1
+
+reverse(nums,0, n-1)
+print (nums)
